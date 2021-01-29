@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Livewire\ItemComponent;
+use App\Http\Livewire\Item;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +25,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'management'], function () {
-        Route::get('/item', [ItemComponent::class, 'render'])
+        Route::get('/item', [Item::class, 'render'])
             ->name('management.item.render');
     });
 });
