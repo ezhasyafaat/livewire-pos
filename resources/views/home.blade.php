@@ -1,22 +1,22 @@
-@extends('layouts.app')
+@extends('_layouts.app')
+
+@section('title_page')
+Dashboard - {{ config('app.name') }}
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+<div class="content">
+    <div class="block">
+        <div class="block-header block-header-default">
+            <h3 class="block-title">{{ __('Dashboard') }}</h3>
+        </div>
+        <div class="block-content">
+           @if(session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
                 </div>
-            </div>
+            @endif
+            <p>{{ __('You are logged in!') }}</p>
         </div>
     </div>
 </div>
