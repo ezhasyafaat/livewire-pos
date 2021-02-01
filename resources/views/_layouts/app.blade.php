@@ -98,7 +98,7 @@
                         <!-- User Info -->
                         <div class="content-header-item">
                             <a class="img-link mr-5" href="be_pages_generic_profile.html">
-                                <img class="img-avatar img-avatar32" src="codebase/media/avatars/avatar15.jpg" alt="">
+                                <img class="img-avatar img-avatar32" src="{{ asset('codebase/media/avatars/avatar15.jpg') }}" alt="">
                             </a>
                             <a class="align-middle link-effect text-primary-dark font-w600" href="be_pages_generic_profile.html">John Smith</a>
                         </div>
@@ -162,28 +162,28 @@
                             <ul class="nav-users push">
                                 <li>
                                     <a href="be_pages_generic_profile.html">
-                                        <img class="img-avatar" src="codebase/media/avatars/avatar8.jpg" alt="">
+                                        <img class="img-avatar" src="{{ asset('codebase/media/avatars/avatar8.jpg') }}" alt="">
                                         <i class="fa fa-circle text-success"></i> Betty Kelley
                                         <div class="font-w400 font-size-xs text-muted">Photographer</div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="be_pages_generic_profile.html">
-                                        <img class="img-avatar" src="codebase/media/avatars/avatar10.jpg" alt="">
+                                        <img class="img-avatar" src="{{ asset('codebase/media/avatars/avatar10.jpg') }}" alt="">
                                         <i class="fa fa-circle text-success"></i> Carl Wells
                                         <div class="font-w400 font-size-xs text-muted">Web Designer</div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="be_pages_generic_profile.html">
-                                        <img class="img-avatar" src="codebase/media/avatars/avatar5.jpg" alt="">
+                                        <img class="img-avatar" src="{{ asset('codebase/media/avatars/avatar5.jpg') }}" alt="">
                                         <i class="fa fa-circle text-warning"></i> Susan Day
                                         <div class="font-w400 font-size-xs text-muted">UI Designer</div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="be_pages_generic_profile.html">
-                                        <img class="img-avatar" src="codebase/media/avatars/avatar11.jpg" alt="">
+                                        <img class="img-avatar" src="{{ asset('codebase/media/avatars/avatar11.jpg') }}" alt="">
                                         <i class="fa fa-circle text-danger"></i> Wayne Garcia
                                         <div class="font-w400 font-size-xs text-muted">Copywriter</div>
                                     </a>
@@ -435,14 +435,14 @@
                         <div class="content-side content-side-full content-side-user px-10 align-parent">
                             <!-- Visible only in mini mode -->
                             <div class="sidebar-mini-visible-b align-v animated fadeIn">
-                                <img class="img-avatar img-avatar32" src="codebase/media/avatars/avatar15.jpg" alt="">
+                                <img class="img-avatar img-avatar32" src="{{ asset('codebase/media/avatars/avatar15.jpg') }}" alt="">
                             </div>
                             <!-- END Visible only in mini mode -->
 
                             <!-- Visible only in normal mode -->
                             <div class="sidebar-mini-hidden-b text-center">
                                 <a class="img-link" href="be_pages_generic_profile.html">
-                                    <img class="img-avatar" src="codebase/media/avatars/avatar15.jpg" alt="">
+                                    <img class="img-avatar" src="{{ asset('codebase/media/avatars/avatar15.jpg') }}" alt="">
                                 </a>
                                 <ul class="list-inline mt-10">
                                     <li class="list-inline-item">
