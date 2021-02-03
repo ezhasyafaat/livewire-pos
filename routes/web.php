@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Livewire\Admin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,10 +23,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-//Route
-Route::group(['middleware' => 'auth'], function () {
-    Route::group(['prefix' => 'management'], function () {
-        Route::get('/item', [App\Http\Livewire\Item::class, 'render'])
-            ->name('management.item.render');
-    });
+//Route Superadmin
+Route::group(['middleware' => ['auth', 'superadmin'], 'prefix' => 'superadmin'], function () {
+    Route::get('admin', [Admin::class, 'render'])->name('superadmin.admin.render');
 });

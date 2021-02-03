@@ -460,31 +460,22 @@
                                 <li>
                                     <a href="{{ route('home') }}"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
                                 </li>
-                                <li class="nav-main-heading"><span class="sidebar-mini-visible">UI</span><span class="sidebar-mini-hidden">Pengelolaan Barang</span></li>
+                                @if(Auth::user()->hasRole('Superadmin'))
+                                <li class="nav-main-heading"><span class="sidebar-mini-hidden">Admin</span></li>
                                 <li>
-                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-puzzle"></i><span class="sidebar-mini-hide">Barang Masuk</span></a>
-                                    <ul>
-                                        <li>
-                                            <a href="be_blocks.html">Riwayat Barang Masuk</a>
-                                        </li>
-                                        <li>
-                                            <a href="be_blocks_draggable.html">Data Barang Masuk</a>
-                                        </li>
-                                        <li>
-                                            <a href="be_blocks_api.html">Input Barang</a>
-                                        </li>
-                                    </ul>
+                                    <a href="{{ route('superadmin.admin.render') }}"><i class="si si-user-following"></i><span class="sidebar-mini-hide">Data Admin</span></a>
                                 </li>
+                                @endif
+                                <li class="nav-main-heading"><span class="sidebar-mini-hidden">Produk</span></li>
                                 <li>
-                                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-moustache"></i><span class="sidebar-mini-hide">Barang Keluar</span></a>
-                                    <ul>
-                                        <li>
-                                            <a href="be_widgets_tiles.html">Riwayat Barang Keluar</a>
-                                        </li>
-                                        <li>
-                                            <a href="be_widgets_users.html">Data Barang Keluar</a>
-                                        </li>
-                                    </ul>
+                                    <a href="#"><i class="si si-basket"></i><span class="sidebar-mini-hide">Data Produk</span></a>
+                                    <a href="#"><i class="si si-cloud-upload"></i><span class="sidebar-mini-hide">Input Produk</span></a>
+                                    <a href="#"><i class="si si-bar-chart"></i><span class="sidebar-mini-hide">Data Penjualan</span></a>
+                                </li>
+                                <li class="nav-main-heading"><span class="sidebar-mini-hidden">Pelanggan</span></li>
+                                <li>
+                                    <a href="#"><i class="si si-users"></i><span class="sidebar-mini-hide">Data Pelanggan</span></a>
+                                    <a href="#"><i class="si si-user-follow"></i><span class="sidebar-mini-hide">Input Pelanggan</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -629,9 +620,12 @@
                                 <!-- END Side Overlay -->
 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="op_auth_signin.html">
-                                    <i class="si si-logout mr-5"></i> Sign Out
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <i class="si si-logout mr-5"></i>Logout
                                 </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </div>
                         </div>
                         <!-- END User Dropdown -->
