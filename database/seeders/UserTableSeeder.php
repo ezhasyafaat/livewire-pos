@@ -60,7 +60,7 @@ class UserTableSeeder extends Seeder
             }
 
             if ($role->name == 'Admin') {
-                foreach (range(1, 2) as $_admin) {
+                foreach (range(1, 20) as $_admin) {
                     $gender     = $faker->randomElement(['male', 'female']);
                     $first_name = $faker->firstName($gender);
                     $last_name  = $faker->lastName($gender);

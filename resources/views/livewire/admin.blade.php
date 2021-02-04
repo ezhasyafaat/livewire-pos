@@ -1,10 +1,3 @@
-@extends('_layouts.app')
-
-@section('title_page')
-Admin - {{ config('app.name') }}
-@endsection
-
-@section('content')
 <div class="content">
     <div class="block">
         <div class="block-header block-header-default">
@@ -33,7 +26,8 @@ Admin - {{ config('app.name') }}
                 	@endforeach
                 </tbody>
             </table>
+
+            {{ $users->links('vendor.livewire.bootstrap') }}
         </div>
     </div>
 </div>
-@endsection
