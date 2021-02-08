@@ -17,10 +17,16 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('code');
             $table->string('name');
-            $table->string('type');
+            $table->string('category');
             $table->string('stock');
-            $table->string('price');
+            $table->enum('unit', ['ml','gr','kg','m','cm']);
+            $table->string('outprice');
+            $table->string('inprice');
+            $table->text('description');
+            $table->string('image');
+            $table->string('supplier');
             $table->string('uploaded_by');
+            $table->string('updated_by');
             $table->timestamps();
             $table->softDeletes();
         });

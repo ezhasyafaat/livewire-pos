@@ -54,8 +54,6 @@ class install extends Command
 
         /********** OPTIMIZE **********/
         $this->line('Finishing..');
-        $this->callSilent('key:generate');
-        $this->callSilent('config:clear');
         $this->callSilent('optimize');
 
         /********** FINISH **********/

@@ -5,5 +5,5 @@ Admin - {{ config('app.name') }}
 @endsection
 
 @section('content')
-	@livewire('admin')
+		@livewire('admin.admin-data')
 @endsection

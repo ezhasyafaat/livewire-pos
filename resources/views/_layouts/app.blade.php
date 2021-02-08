@@ -733,5 +733,6 @@
         -->
         <script src="{{ asset('codebase/js/codebase.app.min.js') }}"></script>
         @livewireScripts
+        @stack('livewireJs')
     </body>
 </html>
