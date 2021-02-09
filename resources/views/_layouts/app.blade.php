@@ -463,13 +463,12 @@
                                 @if(Auth::user()->hasRole('Superadmin'))
                                 <li class="nav-main-heading"><span class="sidebar-mini-hidden">Admin</span></li>
                                 <li>
-                                    <a href="{{ route('superadmin.admin.render') }}"><i class="si si-user-following"></i><span class="sidebar-mini-hide">Data Admin</span></a>
+                                    <a href="{{ route('superadmin.admin.render') }}" data-turbolinks="true"><i class="si si-user-following"></i><span class="sidebar-mini-hide">Data Admin</span></a>
                                 </li>
                                 @endif
                                 <li class="nav-main-heading"><span class="sidebar-mini-hidden">Produk</span></li>
                                 <li>
-                                    <a href="#"><i class="si si-basket"></i><span class="sidebar-mini-hide">Data Produk</span></a>
-                                    <a href="#"><i class="si si-cloud-upload"></i><span class="sidebar-mini-hide">Input Produk</span></a>
+                                    <a href="{{ route('management.product.index') }}" data-turbolinks="true"><i class="si si-basket"></i><span class="sidebar-mini-hide">Data Produk</span></a>
                                     <a href="#"><i class="si si-bar-chart"></i><span class="sidebar-mini-hide">Data Penjualan</span></a>
                                 </li>
                                 <li class="nav-main-heading"><span class="sidebar-mini-hidden">Pelanggan</span></li>
@@ -733,6 +732,7 @@
         -->
         <script src="{{ asset('codebase/js/codebase.app.min.js') }}"></script>
         @livewireScripts
-        @stack('livewireJs')
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false" data-turbo-eval="false"></script>
     </body>
 </html>
