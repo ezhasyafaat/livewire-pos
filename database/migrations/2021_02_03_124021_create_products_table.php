@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('category');
             $table->string('stock');
-            $table->enum('unit', ['ml','gr','kg','m','cm']);
+            $table->string('unit');
             $table->string('outprice');
             $table->string('inprice');
             $table->text('description');

@@ -5,5 +5,5 @@ Product - {{ config('app.name') }}
 @endsection
 
 @section('content')
-		
+		@livewire('product.product-data');
 @endsection
